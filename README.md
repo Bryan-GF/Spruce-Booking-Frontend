@@ -11,7 +11,12 @@ Features:
 - Filter displayed bookings by booking type.
 - Create and store new bookings.
 
+#### Deployed Version: https://nifty-franklin-d5ce03.netlify.com/
+
 ## Running Locally:
+
+In order to run the app locally you must first clone the repository, then navigate 
+into the application folder and run the following commands:
 
 To run the application locally, navigate into the application folder and run the following commands:
 
