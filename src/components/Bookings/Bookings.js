@@ -31,7 +31,7 @@ const reducer = (state, action) => {
     }
 };
 
-const apiBaseURL = 'http://localhost:4000';
+const apiBaseURL = 'https://spruce-api.herokuapp.com';
 
 //Functional component for all booking sub components.
 const Bookings = (props) => {
@@ -121,7 +121,6 @@ const Bookings = (props) => {
 
     // Takes in the timestamp for the booking. Format the booking timestamp for bookings in the booking card component.
     const formatDate = (timestamp) => {
-        console.log(timestamp);
         let date = new Date(timestamp).toLocaleDateString(undefined, {
             day:'numeric',
             month: 'long',
