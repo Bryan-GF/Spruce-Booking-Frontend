@@ -22,6 +22,7 @@ export const BookingModal = (props) => {
                                     name='Name'
                                     type='text'
                                     onChange={(ev)=> {props.setName(ev.target.value)}}
+                                    placeholder='Ex: Jasmine'
                                     required
                                 />
                             </label>
@@ -32,6 +33,7 @@ export const BookingModal = (props) => {
                                     name='Email'
                                     type='text'
                                     onChange={(ev)=> {props.setEmail(ev.target.value)}}
+                                    placeholder='Ex: Jasmine@gmail.com'
                                     required
 
                                 />
@@ -43,6 +45,7 @@ export const BookingModal = (props) => {
                                     name='Street_Address'
                                     type='text'
                                     onChange={(ev)=> {props.setStreetAddress(ev.target.value)}}
+                                    placeholder='Ex: 649 Yukon Street'
                                     required
                                 />
                             </label>
@@ -51,8 +54,9 @@ export const BookingModal = (props) => {
                                 City
                                 <input 
                                     name='City'
-                                    type='text'
+                                    type='text'                             
                                     onChange={(ev)=> {props.setCity(ev.target.value)}}
+                                    placeholder='Ex: Seattle'
                                     required
                                 />
                             </label>
@@ -64,6 +68,7 @@ export const BookingModal = (props) => {
                                         type='text'
                                         className='halfInput'
                                         onChange={(ev)=> {props.setState(ev.target.value)}}
+                                        placeholder='Ex: WA'
                                         required
                                     />
                                 </label>
@@ -75,6 +80,7 @@ export const BookingModal = (props) => {
                                         type='text'
                                         className='halfInput'
                                         onChange={(ev)=> {props.setZipCode(ev.target.value)}}
+                                        placeholder='Ex: 98114'
                                         required
                                     />
                                 </label>
@@ -102,6 +108,7 @@ export const BookingModal = (props) => {
                                     name='Booking_Date'
                                     type='text'
                                     onChange={(ev)=> {props.setDate(ev.target.value)}}
+                                    placeholder='Ex: 7/16/2020'
                                     required
                                 />
                             </label>
@@ -112,6 +119,7 @@ export const BookingModal = (props) => {
                                     name='Booking_Time'
                                     type='text'
                                     onChange={(ev)=> {props.setTime(ev.target.value)}}
+                                    placeholder='Ex: 2:30 PM'
                                     required
                                 />
                             </label>
