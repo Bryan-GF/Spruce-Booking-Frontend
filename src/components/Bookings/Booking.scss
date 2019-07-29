@@ -1,0 +1,255 @@
+@import '../../general.scss';
+
+
+.bookingMainContainer {
+    background: #d8d8d8;
+    padding: 12px;
+    min-height: 100%;
+
+    .paginationButtonsWrapper {
+        display: flex;
+        margin-top: 1rem; 
+        justify-content: flex-end;
+
+        .paginationButton {
+            background: $main-button;
+            margin: 0 1rem;
+            padding: .5rem;
+            border-radius: 4px;
+            box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+
+            .arrow-left {
+                width: 0; 
+                height: 0; 
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent; 
+                border-right:10px solid $main-text; 
+                margin-right:3px;
+            }
+
+            .arrow-right {
+                width: 0; 
+                height: 0; 
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                margin-left:3px;
+                border-left: 10px solid $main-text;
+              }
+
+        }   
+        
+        .paginationButton:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.bookingHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 1.92px;     
+    }   
+    .headerInputs {
+        display: flex;
+
+        form {
+            display: flex;
+            justify-content: center;
+            margin-right: 1rem;
+            input {
+                width: 278px;
+                height: 33px;
+                border-radius: 5px;
+                border: solid 1px #979797;
+                background: #ffffff;
+                padding-left: 10px;
+                outline-color: #f29648;
+                font-size: 1rem;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+    
+            button {
+                height: 37px;
+                border-radius: 5px;
+                background: $main-button;
+                border: solid 1px #979797;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                color: $main-text;
+               
+            }
+    
+            button:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.bookingListContainer {
+
+    p {
+        padding: 5px 11px;
+    }
+
+    .bookingCard {
+        display: flex;
+        background-color: #f5f5f5;
+        margin-bottom: 1px;
+
+        p {
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.96px;
+            word-wrap: break-word;
+            overflow:hidden;
+        }
+
+        .customer {
+            width: 15%;
+        }
+
+        .email {
+            width: 20%;
+        }
+
+        .address {
+            width: 25%;
+            padding: 5px 11px;
+            p {
+                padding: 0;
+            }
+        }
+
+        .bookingDateTime {
+            text-align: end;
+            width: 30%
+        }
+        
+        .bookingType {
+            width: 15%;
+        }
+
+    }
+
+    .bookingListHeader {
+        .bookingCard {
+            background-color: transparent;
+            height: auto;
+        }
+       
+        p {
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: 1.12px;
+        }
+    }
+}
+
+.bookingModalContainer {
+    background-color: #979797;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.5);
+    z-index:5;
+    width:100%;
+    height:100%;
+ 
+    select.arrows {
+        background-image:    url('data:image/png;base64,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');
+        background-position: calc(100% - .5rem), 100% 0;
+        background-size:  .9em 1.5em;
+        background-repeat: no-repeat;
+    }
+    
+    select {
+        -o-appearance: none;
+        -ms-appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+     }
+
+     .bookingCreatorWrapper {
+        background: white;
+        margin: 0 auto;
+        width: 650px;
+        margin-top: 296px;
+        border-radius: 8px;
+        box-shadow: 0px 1px 8px rgba(0,0,0,0.5);
+        display: block;
+        padding: 20px;
+
+        h2 {
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 1.92px;
+            padding-bottom: 13px;
+            padding-top: 8px;
+        }
+
+        .bookingForm {
+            
+            .creatorButtonMove {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 31px;
+            }
+
+            .bookingFormInputs {
+                display: flex;  
+                justify-content: space-between;
+
+                label {
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: 0.96px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 11px;
+                }  
+    
+                input {
+                    width: 278px;
+                    height: 33px;
+                    border-radius: 2px;
+                    border: solid 1px #979797;
+                    background: #ffffff;
+                    padding-left: 10px;
+                    outline-color: #f29648
+                }
+    
+                select {
+                    width: 100%;
+                    height: 37px;
+                    outline: none;
+                    border-radius: 2px;
+                    border: solid 1px #979797;
+                    padding-left: 10px;
+                }
+    
+                .halfInput {
+                    width: 121px;
+                }
+                
+                .halfInputsWrapper {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }          
+        }
+     }
+
+
+}
+
+
